@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,39 +48,133 @@
       position: relative;
     }
 
-    body { font-family: Arial, sans-serif; margin: 0; background-color: #fff; color: #000; min-height: 100vh; display: flex; flex-direction: column; }
-    nav { position: sticky; top: 0; background: #000; color: #ffd700; padding: 10px; z-index: 1000; text-align: center; font-weight: bold; }
-    nav a { color: #ffd700; text-decoration: none; margin: 0 15px; font-weight: bold; }
-    .container { text-align: center; padding: 5px; flex: 1; }
-    img.flyer { width: 100%; max-width: 800px; height: auto; display: block; margin: 0 auto 10px; }
-    .quote-button { background-color: #ffd700; color: #000; padding: 15px 25px; font-size: 1.2em; font-weight: bold; text-decoration: none; border-radius: 5px; display: inline-block; margin-bottom: 30px; }
-    .description, .faq, .waiver, .privacy, .contact { max-width: 900px; margin: 10px auto; padding: 0 20px; text-align: left; }
-    #embed-container { margin: 0 auto; width: 100%; max-width: 400px; }
-    h2 { font-size: 1.8em; margin-bottom: 10px; margin-top: 5px; }
-    .spanish { font-style: italic; border-left: 3px solid #ffd700; padding-left: 15px; margin-top: 15px; color: #333; }
-    .calculator { font-size: 1.2em; font-weight: bold; background-color: #fff8dc; border: 2px solid #ffd700; padding: 25px; margin: 10px auto; max-width: 400px; }
-    .calculator label, .calculator input, .calculator select, .calculator button { display: block; width: 100%; margin-bottom: 15px; font-size: 1em; }
-    .calculator button { background-color: #ffd700; border: none; padding: 12px; cursor: pointer; }
-    form { background: #f9f9f9; padding: 20px; border: 1px solid #ccc; }
-    form label { display: block; margin-bottom: 10px; }
-    form input, form button { padding: 10px; width: 100%; margin-bottom: 15px; }
-    footer { background-color: #000; color: #ffd700; text-align: center; padding: 15px; font-size: 0.9em; font-weight: bold; position: sticky; bottom: 0; width: 100%; }
+    body { 
+      font-family: Arial, sans-serif; 
+      margin: 0; 
+      background-color: #fff; 
+      color: #000; 
+      min-height: 100vh; 
+      display: flex; 
+      flex-direction: column; 
+    }
+    nav { 
+      position: sticky; 
+      top: 0; 
+      background: #000; 
+      color: #ffd700; 
+      padding: 10px; 
+      z-index: 1000; 
+      text-align: center; 
+      font-weight: bold; 
+    }
+    nav a { 
+      color: #ffd700; 
+      text-decoration: none; 
+      margin: 0 15px; 
+      font-weight: bold; 
+    }
+    .container { 
+      text-align: center; 
+      padding: 5px; 
+      flex: 1; 
+    }
+    img.flyer { 
+      width: 100%; 
+      max-width: 800px; 
+      height: auto; 
+      display: block; 
+      margin: 0 auto 10px; 
+    }
+    .quote-button { 
+      background-color: #ffd700; 
+      color: #000; 
+      padding: 15px 25px; 
+      font-size: 1.2em; 
+      font-weight: bold; 
+      text-decoration: none; 
+      border-radius: 5px; 
+      display: inline-block; 
+      margin-bottom: 30px; 
+    }
+    .description, .faq, .waiver, .privacy, .contact { 
+      max-width: 900px; 
+      margin: 10px auto; 
+      padding: 0 20px; 
+      text-align: left; 
+    }
+    #embed-container { 
+      margin: a auto; 
+      width: 100%; 
+      max-width: 400px; 
+    }
+    h2 { 
+      font-size: 1.8em; 
+      margin-bottom: 10px; 
+      margin-top: 5px; 
+    }
+    .spanish { 
+      font-style: italic; 
+      border-left: 3px solid #ffd700; 
+      padding-left: 15px; 
+      margin-top: 15px; 
+      color: #333; 
+    }
+    .calculator { 
+      font-size: 1.2em; 
+      font-weight: bold; 
+      background-color: #fff8dc; 
+      border: 2px solid #ffd700; 
+      padding: 25px; 
+      margin: 10px auto; 
+      max-width: 400px; 
+    }
+    .calculator label, .calculator input, .calculator select, .calculator button { 
+      display: block; 
+      width: 100%; 
+      margin-bottom: 15px; 
+      font-size: 1em; 
+    }
+    .calculator button { 
+      background-color: #ffd700; 
+      border: none; 
+      padding: 12px; 
+      cursor: pointer; 
+    }
+    form { 
+      background: #f9f9f9; 
+      padding: 20px; 
+      border: 1px solid #ccc; 
+    }
+    form label { 
+      display: block; 
+      margin-bottom: 10px; 
+    }
+    form input, form button { 
+      padding: 10px; 
+      width: 100%; 
+      margin-bottom: 15px; 
+    }
+    footer { 
+      background-color: #000; 
+      color: #ffd700; 
+      text-align: center; 
+      padding: 15px; 
+      font-size: 0.9em; 
+      font-weight: bold; 
+      margin-top: auto; /* Push footer to bottom */
+      width: 100%; 
+    }
   </style>
 </head>
 <body>
-  <nav><a href="#embed">Today's Spot Gold Price</a>
+  <nav>
+    <a href="#embed">Today's Spot Gold Price</a>
     <a href="#quote">Get a Live Quote</a>
     <a href="#about">About the Spot Gold Price</a>
     <a href="#faq">Frequently Asked Questions</a>
     <a href="#waiver">Waivers and Disclosures</a>
     <a href="#contact">Contact Us</a>
     <a href="#law">Gold in the Law</a>
-    <a href="#embed">Today's Spot Gold Price</a>
-    <a href="#quote">Get a Live Quote</a>
-    <a href="#about">About the Spot Gold Price</a>
-    <a href="#faq">FAQ</a>
-    <a href="#waiver">Waivers</a>
-    <a href="#contact">Contact</a>
   </nav>
 
   <div class="container">
@@ -145,6 +238,7 @@
         <label>Email <input type="email" name="email" required /></label>
         <button type="submit">Send</button>
       </form>
+    </div>
     
     <div class="description" id="about">
       <h2>About the Spot Gold Price</h2>
@@ -203,52 +297,49 @@
         <p><strong>6. Seguridad:</strong> Reuniones en lugares públicos.</p>
       </div>
     </div>
+
+    <div class="legal" id="law">
+      <h2>Gold in the Law</h2>
+      <p><strong>Is there sales tax on gold?</strong><br>
+      Not in our home state of Arizona. Therefore, purchases made through our service are not subject to sales tax.</p>
+
+      <p><strong>Are gold bullion coins legal tender?</strong><br>
+      Yes — most gold bullion coins carry a nominal face value, allowing them to cross borders without being taxed or treated like raw bullion.</p>
+
+      <p><strong>Do bullion coins come with a certificate of authenticity?</strong><br>
+      Yes. The mint or refiner stamps each piece with its weight, purity, and origin — essentially making the gold itself the certificate. Gold's unique physical properties also make authenticity easy to verify using tests that date back to ancient times.</p>
+
+      <p><strong>Are there counterfeit gold coins?</strong><br>
+      While counterfeits exist, gold's density and weight make it very difficult to fake convincingly. We always recommend working with trusted dealers to ensure authenticity.</p>
+
+      <p><strong>Was gold ownership ever illegal in the U.S.?</strong><br>
+      Yes — from 1933 to 1974, Americans couldn't legally own gold bullion without special licenses. These restrictions ended on January 1, 1975.</p>
+
+      <p><strong>When were gold restrictions lifted?</strong><br>
+      As of January 1, 1975, private citizens were again allowed to own any form or quantity of gold freely and without licenses.</p>
+
+      <p><strong>Are there limits on how much gold I can own?</strong><br>
+      No — there are no federal limits. Your gold ownership is only limited by your personal budget.</p>
+
+      <p><strong>Do you report my gold purchases?</strong><br>
+      Absolutely not. Your transactions with us are private. We are under no obligation to report any gold purchases to any government agency.</p>
+
+      <p><strong>What about purchases over $10,000?</strong><br>
+      Reporting is only triggered when transactions involve actual cash (like large sums of currency). Bank wires or personal checks — regardless of size — are not reported.</p>
+
+      <p><strong>Do you report gold sales?</strong><br>
+      Only in very specific cases involving 25+ ounce sales of certain bullion coins (like Krugerrands, Maple Leafs, or Onzas). In those cases, a 1099-B form may be filed.</p>
+
+      <p><strong>Do I have to report my gold purchases?</strong><br>
+      No. There is no federal, state, or local agency that tracks or monitors how much gold you own.</p>
+
+      <p><strong>Are profits from selling gold taxable?</strong><br>
+      Yes — just like any investment, gains on gold are subject to capital gains taxes if you sell for a profit.</p>
+    </div>
   </div>
 
   <footer>
     Temecula Mobile Gold Buyers &bull; (951) 297-7858 &bull; Family Owned Since 2015
   </footer>
-    Temecula Mobile Gold Buyers &bull; (951) 297-7858 &bull; Family Owned Since 2015
-  </footer>
-
-<div class="legal" id="law">
-  <h2>Gold in the Law</h2>
-  <p><strong>Is there sales tax on gold?</strong><br>
-  Not in our home state of Arizona. Therefore, purchases made through our service are not subject to sales tax.</p>
-
-  <p><strong>Are gold bullion coins legal tender?</strong><br>
-  Yes — most gold bullion coins carry a nominal face value, allowing them to cross borders without being taxed or treated like raw bullion.</p>
-
-  <p><strong>Do bullion coins come with a certificate of authenticity?</strong><br>
-  Yes. The mint or refiner stamps each piece with its weight, purity, and origin — essentially making the gold itself the certificate. Gold’s unique physical properties also make authenticity easy to verify using tests that date back to ancient times.</p>
-
-  <p><strong>Are there counterfeit gold coins?</strong><br>
-  While counterfeits exist, gold’s density and weight make it very difficult to fake convincingly. We always recommend working with trusted dealers to ensure authenticity.</p>
-
-  <p><strong>Was gold ownership ever illegal in the U.S.?</strong><br>
-  Yes — from 1933 to 1974, Americans couldn’t legally own gold bullion without special licenses. These restrictions ended on January 1, 1975.</p>
-
-  <p><strong>When were gold restrictions lifted?</strong><br>
-  As of January 1, 1975, private citizens were again allowed to own any form or quantity of gold freely and without licenses.</p>
-
-  <p><strong>Are there limits on how much gold I can own?</strong><br>
-  No — there are no federal limits. Your gold ownership is only limited by your personal budget.</p>
-
-  <p><strong>Do you report my gold purchases?</strong><br>
-  Absolutely not. Your transactions with us are private. We are under no obligation to report any gold purchases to any government agency.</p>
-
-  <p><strong>What about purchases over $10,000?</strong><br>
-  Reporting is only triggered when transactions involve actual cash (like large sums of currency). Bank wires or personal checks — regardless of size — are not reported.</p>
-
-  <p><strong>Do you report gold sales?</strong><br>
-  Only in very specific cases involving 25+ ounce sales of certain bullion coins (like Krugerrands, Maple Leafs, or Onzas). In those cases, a 1099-B form may be filed.</p>
-
-  <p><strong>Do I have to report my gold purchases?</strong><br>
-  No. There is no federal, state, or local agency that tracks or monitors how much gold you own.</p>
-
-  <p><strong>Are profits from selling gold taxable?</strong><br>
-  Yes — just like any investment, gains on gold are subject to capital gains taxes if you sell for a profit.</p>
-</div>
-
 </body>
 </html>
