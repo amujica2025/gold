@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,126 +21,101 @@
     });
   </script>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #fff;
-      color: #000;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-    nav {
-      position: sticky;
-      top: 0;
-      background: #000;
-      color: #ffd700;
-      padding: 10px;
-      z-index: 1000;
-      text-align: center;
-      font-weight: bold;
-    }
-    nav a {
-      color: #ffd700;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
-    .container {
-      text-align: center;
-      padding: 5px;
-      flex: 1;
-    }
-    img.flyer {
-      width: 100%;
-      max-width: 800px;
-      height: auto;
-      display: block;
-      margin: 0 auto 10px;
-    }
-    .quote-button {
-      background-color: #ffd700;
-      color: #000;
-      padding: 15px 25px;
-      font-size: 1.2em;
-      font-weight: bold;
-      text-decoration: none;
-      border-radius: 5px;
-      display: inline-block;
-      margin-bottom: 30px;
-    }
-    .description, .faq, .waiver, .privacy, .contact {
-      max-width: 900px;
-      margin: 10px auto;
-      padding: 0 20px;
-      text-align: left;
-    }
-    #embed-container {
-      margin: 0 auto;
-      width: 100%;
-      max-width: 400px;
-    }
-    h2 {
-      font-size: 1.8em;
-      margin-bottom: 10px;
-      margin-top: 5px;
-    }
-    .spanish {
-      font-style: italic;
-      border-left: 3px solid #ffd700;
-      padding-left: 15px;
-      margin-top: 15px;
-      color: #333;
-    }
-    .calculator {
-      font-size: 1.2em;
-      font-weight: bold;
-      background-color: #fff8dc;
-      border: 2px solid #ffd700;
-      padding: 25px;
-      margin: 10px auto;
-      max-width: 400px;
-    }
-    .calculator label, .calculator input, .calculator select, .calculator button {
-      display: block;
-      width: 100%;
-      margin-bottom: 15px;
-      font-size: 1em;
-    }
-    .calculator button {
-      background-color: #ffd700;
-      border: none;
-      padding: 12px;
-      cursor: pointer;
-    }
-    form {
-      background: #f9f9f9;
-      padding: 20px;
-      border: 1px solid #ccc;
-    }
-    form label {
-      display: block;
-      margin-bottom: 10px;
-    }
-    form input, form button {
-      padding: 10px;
-      width: 100%;
-      margin-bottom: 15px;
-    }
-    footer {
-      background-color: #000;
-      color: #ffd700;
-      text-align: center;
-      padding: 15px;
-      font-size: 0.9em;
-      font-weight: bold;
-      position: sticky;
-      bottom: 0;
-      width: 100%;
-    }
+    body { font-family: Arial, sans-serif; margin: 0; background-color: #fff; color: #000; min-height: 100vh; display: flex; flex-direction: column; }
+    nav { position: sticky; top: 0; background: #000; color: #ffd700; padding: 10px; z-index: 1000; text-align: center; font-weight: bold; }
+    nav a { color: #ffd700; text-decoration: none; margin: 0 15px; font-weight: bold; }
+    .container { text-align: center; padding: 5px; flex: 1; }
+    img.flyer { width: 100%; max-width: 800px; height: auto; display: block; margin: 0 auto 10px; }
+    .quote-button { background-color: #ffd700; color: #000; padding: 15px 25px; font-size: 1.2em; font-weight: bold; text-decoration: none; border-radius: 5px; display: inline-block; margin-bottom: 30px; }
+    .description, .faq, .waiver, .privacy, .contact { max-width: 900px; margin: 10px auto; padding: 0 20px; text-align: left; }
+    #embed-container { margin: 0 auto; width: 100%; max-width: 400px; }
+    h2 { font-size: 1.8em; margin-bottom: 10px; margin-top: 5px; }
+    .spanish { font-style: italic; border-left: 3px solid #ffd700; padding-left: 15px; margin-top: 15px; color: #333; }
+    .calculator { font-size: 1.2em; font-weight: bold; background-color: #fff8dc; border: 2px solid #ffd700; padding: 25px; margin: 10px auto; max-width: 400px; }
+    .calculator label, .calculator input, .calculator select, .calculator button { display: block; width: 100%; margin-bottom: 15px; font-size: 1em; }
+    .calculator button { background-color: #ffd700; border: none; padding: 12px; cursor: pointer; }
+    form { background: #f9f9f9; padding: 20px; border: 1px solid #ccc; }
+    form label { display: block; margin-bottom: 10px; }
+    form input, form button { padding: 10px; width: 100%; margin-bottom: 15px; }
+    footer { background-color: #000; color: #ffd700; text-align: center; padding: 15px; font-size: 0.9em; font-weight: bold; position: sticky; bottom: 0; width: 100%; }
   </style>
 </head>
 <body>
-  <!-- [Body content omitted for brevity in preview] -->
+  <nav>
+    <a href="#embed">Today's Spot Gold Price</a>
+    <a href="#quote">Get a Live Quote</a>
+    <a href="#about">About the Spot Gold Price</a>
+    <a href="#faq">FAQ</a>
+    <a href="#waiver">Waivers</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="container">
+    <img src="TEM.png" alt="Gold Buying Flyer" class="flyer" onerror="this.style.display='none'">
+
+    <h2 id="embed">Today's Spot Gold Price</h2>
+    <div id="embed-container">
+      <script src="https://www.bullionvault.com/chart/bullionvaultchart.js"></script>
+      <script>
+        var options = {
+          bullion: 'gold', currency: 'USD', timeframe: '1w', chartType: 'line',
+          miniChartModeAxis: 'oz', referrerID: 'MYUSERNAME', containerDefinedSize: true,
+          miniChartMode: false, displayLatestPriceLine: true, switchBullion: true,
+          switchCurrency: true, switchTimeframe: true, switchChartType: true,
+          exportButton: true
+        };
+        var chartBV = new BullionVaultChart(options, 'embed');
+      </script>
+      <div id="embed" style="height: 300px; width: 100%;"></div>
+    </div>
+
+    <div class="calculator" id="quote">
+      <h2>Get a Live Quote</h2>
+      <label for="karat">Select Karat:</label>
+      <select id="karat">
+        <option value="24">24k</option>
+        <option value="22">22k</option>
+        <option value="18">18k</option>
+        <option value="14" selected>14k</option>
+        <option value="10">10k</option>
+      </select>
+      <label for="weight">Weight in grams:</label>
+      <input type="number" id="weight" placeholder="Enter weight in grams" />
+      <label for="spot">Current Spot Price (per gram):</label>
+      <input type="number" id="spot" value="107.00" step="0.01" />
+      <button onclick="calculateOffer()">Calculate Offer</button>
+      <div id="result"></div>
+      <script>
+        const purities = {24: 1.0, 22: 0.916, 18: 0.75, 14: 0.583, 10: 0.417};
+        function calculateOffer() {
+          const karat = document.getElementById('karat').value;
+          const weight = parseFloat(document.getElementById('weight').value);
+          const spot = parseFloat(document.getElementById('spot').value);
+          const payout = 0.60;
+          if (!weight || !spot) {
+            document.getElementById('result').innerText = "Please enter valid values.";
+            return;
+          }
+          const purity = purities[karat];
+          const pureGold = weight * purity;
+          const offer = pureGold * spot * payout;
+          document.getElementById('result').innerText = `Offer: $${offer.toFixed(2)}`;
+        }
+      </script>
+    </div>
+
+    <div class="contact" id="contact">
+      <h2>Contact Us</h2>
+      <form name="contact" netlify>
+        <label>Name <input type="text" name="name" required /></label>
+        <label>Email <input type="email" name="email" required /></label>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    Temecula Mobile Gold Buyers &bull; (951) 234-2083 &bull; Family Owned Since 2015
+  </footer>
 </body>
 </html>
